@@ -7,10 +7,31 @@
     <title>SCAMI | Cartografía de Precisión</title>
     <meta name="description"
         content="Cartografías Digitales e Informes Territoriales en Arica. Entrega en 48 a 72 horas. Soluciones geográficas y análisis territorial.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#154212">
+    <link rel="canonical" href="https://scami.online/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="SCAMI Geospatial">
+    <meta property="og:title" content="SCAMI | Cartografía de Precisión">
+    <meta property="og:description"
+        content="Cartografías digitales e informes territoriales en Arica con entrega en 48 a 72 horas.">
+    <meta property="og:url" content="https://scami.online/">
+    <meta property="og:image" content="https://scami.online/assets/portfolio_4.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SCAMI | Cartografía de Precisión">
+    <meta name="twitter:description"
+        content="Cartografías digitales e informes territoriales en Arica con entrega en 48 a 72 horas.">
+    <meta name="twitter:image" content="https://scami.online/assets/portfolio_4.jpg">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image"
+        href="https://lh3.googleusercontent.com/aida-public/AB6AXuBmacGD-PSZZZ4sLNA4LhucunEBW9_TJi_0Kk9gC8NvMDjtHVAndV3a1NSeaUxdWVZb_3FZxL5yUx7vn08cZXClxmG5W3zU1XIJOD0E82k5wrHo81wPv43WBJ2mS6TwXDf_C7TOIdwh3miACiGWCai_bAQ6x8MHh6bPkuESuUwMLCQK4qQq5RUa8Iu1tfGfPt4bVgyUwWNC07pElJ-cGTWygkq2Z4-t1GTm-PPhVar_lbuiAuEgPv7cksgY4X9KGD7Mh-LX2K6Iwg"
+        fetchpriority="high">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
         rel="stylesheet">
@@ -19,6 +40,25 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "SCAMI Geospatial",
+            "url": "https://scami.online/",
+            "description": "Cartografías digitales e informes territoriales en Arica, Chile.",
+            "areaServed": "Chile",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Arica",
+                "addressCountry": "CL"
+            },
+            "sameAs": [
+                "https://es.fiverr.com/arianka_o"
+            ]
+        }
+    </script>
 </head>
 
 <body class="layer-base">
@@ -31,7 +71,7 @@
                 <span>SCAMI</span>
             </div>
 
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="Navegación principal">
                 <a href="#home" class="active">Inicio</a>
                 <a href="#services">Servicios</a>
                 <a href="#portfolio">Portafolio</a>
@@ -45,7 +85,7 @@
         <section id="home" class="hero-section">
             <div class="hero-bg">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmacGD-PSZZZ4sLNA4LhucunEBW9_TJi_0Kk9gC8NvMDjtHVAndV3a1NSeaUxdWVZb_3FZxL5yUx7vn08cZXClxmG5W3zU1XIJOD0E82k5wrHo81wPv43WBJ2mS6TwXDf_C7TOIdwh3miACiGWCai_bAQ6x8MHh6bPkuESuUwMLCQK4qQq5RUa8Iu1tfGfPt4bVgyUwWNC07pElJ-cGTWygkq2Z4-t1GTm-PPhVar_lbuiAuEgPv7cksgY4X9KGD7Mh-LX2K6Iwg"
-                    alt="aerial high-altitude view of Azapa Valley">
+                    alt="Vista aérea del Valle de Azapa" decoding="async" fetchpriority="high">
                 <div class="hero-overlay"></div>
             </div>
             <div class="container hero-content">
@@ -142,7 +182,7 @@
             <div class="container about-grid fade-in-scroll">
                 <div class="about-image">
                     <img src="assets/me.png"
-                        alt="SCAMI Professional Portrait">
+                        alt="Retrato profesional de SCAMI" loading="lazy" decoding="async">
                 </div>
                 <div class="about-content">
                     <h2 class="font-headline section-title" style="color: var(--primary);">Sobre mí</h2>
@@ -173,14 +213,19 @@
                 <h2 class="font-headline section-title">Servicios Destacados</h2>
             </div>
 
-            <div class="portfolio-scroll container fade-in-scroll">
+            <div class="portfolio-carousel container fade-in-scroll">
+                <button class="portfolio-arrow portfolio-arrow-prev" type="button" aria-label="Proyecto anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+
+                <div class="portfolio-scroll">
                 <!-- Portfolio 1 -->
                 <div class="portfolio-card layer-section ghost-border">
                     <div class="portfolio-img">
                         <img src="/assets/portfolio_4.jpg"
                             alt="Superposición Predial"
                             data-full-src="/assets/portfolio_4.jpg"
-                            data-full-alt="Superposición Predial">
+                            data-full-alt="Superposición Predial" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
                         <h4 class="font-headline">Superposición Predial</h4>
@@ -193,7 +238,7 @@
                         <img src="/assets/portfolio_1.png"
                             alt="Proyectos Comunitarios"
                             data-full-src="/assets/portfolio_1.png"
-                            data-full-alt="Proyectos Comunitarios">
+                            data-full-alt="Proyectos Comunitarios" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
                         <h4 class="font-headline">Proyectos Comunitarios</h4>
@@ -206,7 +251,7 @@
                         <img src="/assets/portfolio_2.jpeg"
                             alt="Proyecto Individual"
                             data-full-src="/assets/portfolio_2.jpeg"
-                            data-full-alt="Proyecto Individual">
+                            data-full-alt="Proyecto Individual" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
                         <h4 class="font-headline">Proyecto Individual</h4>
@@ -219,7 +264,7 @@
                         <img src="/assets/portfolio_5.png"
                             alt="Sistema de Evacuación"
                             data-full-src="/assets/portfolio_5.png"
-                            data-full-alt="Sistema de Evacuación">
+                            data-full-alt="Sistema de Evacuación" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
                         <h4 class="font-headline">Sistema de Evacuación</h4>
@@ -232,13 +277,19 @@
                         <img src="/assets/portfolio_3.png"
                             alt="Análisis NDVI"
                             data-full-src="/assets/portfolio_3.png"
-                            data-full-alt="Análisis NDVI">
+                            data-full-alt="Análisis NDVI" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
                         <h4 class="font-headline">Análisis NDVI</h4>
                         <p>Estudio de caso para medir el impacto de la construcción del canal Uchusuma en comunidades indígenas del sector línea Tacora-Chislluma. Comuna de General Lagos, Norte de Chile</p>
                     </div>
                 </div>
+
+                </div>
+
+                <button class="portfolio-arrow portfolio-arrow-next" type="button" aria-label="Siguiente proyecto">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
             </div>
         </section>
 
@@ -258,7 +309,8 @@
                 <h3 class="font-headline">Encuéntrame también en Fiverr</h3>
                 <p class="font-body">Ofrezco servicios internacionales de digitalización cartográfica y análisis de
                     datos SIG para clientes en todo el mundo.</p>
-                <a href="https://es.fiverr.com/arianka_o" class="btn" style="background: white; color: var(--tertiary);">Ver perfil en Fiverr</a>
+                <a href="https://es.fiverr.com/arianka_o" class="btn" style="background: white; color: var(--tertiary);"
+                    target="_blank" rel="noopener noreferrer">Ver perfil en Fiverr</a>
             </div>
         </section>
 
@@ -300,7 +352,7 @@
     </a>
 
     <!-- JavaScript -->
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 </body>
 
 </html>

@@ -22,13 +22,86 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Active Mobile Nav Item Highlighting based on scroll position
     const sections = document.querySelectorAll('section[id]');
     const desktopNavLinks = document.querySelectorAll('.desktop-nav a');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-item');
+    const sectionOffsets = [];
+    let scrollTicking = false;
+
+    const rebuildSectionOffsets = () => {
+        sectionOffsets.length = 0;
+        sections.forEach((section) => {
+            sectionOffsets.push({
+                id: section.getAttribute('id'),
+                top: section.offsetTop
+            });
+        });
+    };
+
+    const updateActiveDesktopNav = () => {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 150;
+
+        sectionOffsets.forEach((sectionData) => {
+            if (scrollPosition >= sectionData.top) {
+                currentSection = sectionData.id;
+            }
+        });
+
+        desktopNavLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+        });
+    };
 
     // 3. Portfolio lightbox for full-screen image viewing
     const lightbox = document.querySelector('.portfolio-lightbox');
     const lightboxImage = document.querySelector('.portfolio-lightbox__image');
     const lightboxClose = document.querySelector('.portfolio-lightbox__close');
     const portfolioImages = document.querySelectorAll('.portfolio-img');
+    const portfolioScroll = document.querySelector('.portfolio-scroll');
+    const portfolioPrevButton = document.querySelector('.portfolio-arrow-prev');
+    const portfolioNextButton = document.querySelector('.portfolio-arrow-next');
+    const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+
+    const getPortfolioStep = () => {
+        if (!portfolioScroll) {
+            return 0;
+        }
+
+        const firstCard = portfolioScroll.querySelector('.portfolio-card');
+        if (!firstCard) {
+            return portfolioScroll.clientWidth;
+        }
+
+        const gap = parseFloat(window.getComputedStyle(portfolioScroll).gap) || 0;
+        return firstCard.getBoundingClientRect().width + gap;
+    };
+
+    const updatePortfolioArrows = () => {
+        if (!portfolioScroll || !portfolioPrevButton || !portfolioNextButton) {
+            return;
+        }
+
+        if (!desktopMediaQuery.matches) {
+            portfolioPrevButton.disabled = true;
+            portfolioNextButton.disabled = true;
+            return;
+        }
+
+        const maxScroll = portfolioScroll.scrollWidth - portfolioScroll.clientWidth;
+        const currentScroll = portfolioScroll.scrollLeft;
+
+        portfolioPrevButton.disabled = currentScroll <= 4;
+        portfolioNextButton.disabled = currentScroll >= (maxScroll - 4);
+    };
+
+    const scrollPortfolio = (direction) => {
+        if (!portfolioScroll || !desktopMediaQuery.matches) {
+            return;
+        }
+
+        portfolioScroll.scrollBy({
+            left: getPortfolioStep() * direction,
+            behavior: 'smooth'
+        });
+    };
 
     const closeLightbox = () => {
         if (!lightbox) {
@@ -86,6 +159,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (portfolioPrevButton) {
+        portfolioPrevButton.addEventListener('click', () => scrollPortfolio(-1));
+    }
+
+    if (portfolioNextButton) {
+        portfolioNextButton.addEventListener('click', () => scrollPortfolio(1));
+    }
+
+    if (portfolioScroll) {
+        portfolioScroll.addEventListener('scroll', updatePortfolioArrows);
+    }
+
+    if (desktopMediaQuery && typeof desktopMediaQuery.addEventListener === 'function') {
+        desktopMediaQuery.addEventListener('change', updatePortfolioArrows);
+    }
+
+    window.addEventListener('resize', () => {
+        rebuildSectionOffsets();
+        updatePortfolioArrows();
+        updateActiveDesktopNav();
+    });
+
+    rebuildSectionOffsets();
+    updateActiveDesktopNav();
+    updatePortfolioArrows();
+
     window.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             closeLightbox();
@@ -93,40 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('scroll', () => {
-        let currentSection = '';
+        if (scrollTicking) {
+            return;
+        }
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            // Subtract header height or adjust threshold feeling
-            if (scrollY >= (sectionTop - 150)) {
-                currentSection = section.getAttribute('id');
-            }
+        scrollTicking = true;
+        window.requestAnimationFrame(() => {
+            updateActiveDesktopNav();
+            scrollTicking = false;
         });
-
-        // Update Desktop Nav
-        desktopNavLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            }
-        });
-
-        // Update Mobile Nav
-        mobileNavLinks.forEach(link => {
-            link.classList.remove('active');
-            
-            // Manage icon outline vs fill for material symbols
-            const icon = link.querySelector('.material-symbols-outlined');
-            if (icon) {
-                icon.style.fontVariationSettings = "'FILL' 0";
-            }
-
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-                if (icon) {
-                    icon.style.fontVariationSettings = "'FILL' 1";
-                }
-            }
-        });
-    });
+    }, { passive: true });
 });
