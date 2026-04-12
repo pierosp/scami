@@ -24,6 +24,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const desktopNavLinks = document.querySelectorAll('.desktop-nav a');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-item');
 
+    // 3. Portfolio lightbox for full-screen image viewing
+    const lightbox = document.querySelector('.portfolio-lightbox');
+    const lightboxImage = document.querySelector('.portfolio-lightbox__image');
+    const lightboxClose = document.querySelector('.portfolio-lightbox__close');
+    const portfolioImages = document.querySelectorAll('.portfolio-img');
+
+    const closeLightbox = () => {
+        if (!lightbox) {
+            return;
+        }
+
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    const openLightbox = (image) => {
+        if (!lightbox || !lightboxImage || !image) {
+            return;
+        }
+
+        const fullSrc = image.dataset.fullSrc || image.src;
+        const fullAlt = image.dataset.fullAlt || image.alt || 'Imagen ampliada';
+
+        lightboxImage.src = fullSrc;
+        lightboxImage.alt = fullAlt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    portfolioImages.forEach((portfolioImage) => {
+        portfolioImage.setAttribute('tabindex', '0');
+        portfolioImage.setAttribute('role', 'button');
+        portfolioImage.setAttribute('aria-label', 'Abrir imagen en pantalla completa');
+
+        portfolioImage.addEventListener('click', () => {
+            const image = portfolioImage.querySelector('img');
+            openLightbox(image);
+        });
+
+        portfolioImage.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                const image = portfolioImage.querySelector('img');
+                openLightbox(image);
+            }
+        });
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+
     window.addEventListener('scroll', () => {
         let currentSection = '';
 
