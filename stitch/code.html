@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-background": "#191c1d",
+                    "surface-container": "#edeeef",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-container": "#93c7ff",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed": "#001d35",
+                    "inverse-surface": "#2e3132",
+                    "secondary-fixed": "#ffdbd0",
+                    "secondary-fixed-dim": "#ffb59d",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c2c9bb",
+                    "background": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "primary": "#154212",
+                    "outline": "#72796e",
+                    "on-secondary-fixed": "#390c00",
+                    "on-secondary-container": "#763017",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#00497a",
+                    "primary-fixed-dim": "#a1d494",
+                    "tertiary-container": "#005389",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "on-primary-container": "#9dd090",
+                    "on-primary-fixed": "#002201",
+                    "tertiary-fixed-dim": "#9ccaff",
+                    "surface-dim": "#d9dadb",
+                    "surface-tint": "#3b6934",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary-container": "#2d5a27",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#bcf0ae",
+                    "inverse-primary": "#a1d494",
+                    "surface-bright": "#f8f9fa",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#d0e4ff",
+                    "secondary-container": "#fd9a78",
+                    "on-surface-variant": "#42493e",
+                    "tertiary": "#003b64",
+                    "surface-variant": "#e1e3e4",
+                    "secondary": "#96482d",
+                    "on-primary-fixed-variant": "#23501e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#783118"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #154212 0%, #2d5a27 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-900 dark:text-green-50" data-icon="explore">explore</span>
+<span class="text-xl font-extrabold tracking-tighter text-green-900 dark:text-green-50 font-['Manrope']">SCAMI</span>
+</div>
+<div class="hidden md:flex gap-6">
+<a class="text-green-700 dark:text-green-400 font-bold font-['Manrope'] font-semibold tracking-tight" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 transition-colors font-['Manrope'] font-semibold tracking-tight" href="#">Services</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 transition-colors font-['Manrope'] font-semibold tracking-tight" href="#">Portfolio</a>
+</div>
+<button class="px-4 py-1.5 rounded-xl bg-primary text-on-primary font-['Manrope'] font-semibold text-sm active:scale-95 duration-200">Contact</button>
+</div>
+</header>
+<main class="pt-16 pb-24">
+<!-- Hero Section -->
+<section class="relative min-h-[751px] flex flex-col justify-end p-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[20%] brightness-75" data-alt="aerial high-altitude view of the lush green Azapa Valley oasis surrounded by arid desert mountains in Arica, Chile, technical cartographic feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmacGD-PSZZZ4sLNA4LhucunEBW9_TJi_0Kk9gC8NvMDjtHVAndV3a1NSeaUxdWVZb_3FZxL5yUx7vn08cZXClxmG5W3zU1XIJOD0E82k5wrHo81wPv43WBJ2mS6TwXDf_C7TOIdwh3miACiGWCai_bAQ6x8MHh6bPkuESuUwMLCQK4qQq5RUa8Iu1tfGfPt4bVgyUwWNC07pElJ-cGTWygkq2Z4-t1GTm-PPhVar_lbuiAuEgPv7cksgY4X9KGD7Mh-LX2K6Iwg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-lg">
+<span class="font-label text-xs tracking-[0.2em] text-secondary-container mb-2 block uppercase font-medium">CARTOGRAFÍA DE PRECISIÓN</span>
+<h1 class="font-headline text-4xl font-extrabold text-white tracking-tighter leading-tight mb-4">
+                    Te hago el mapa que necesitas en <span class="text-primary-fixed">48 horas</span>
+</h1>
+<p class="text-surface-variant font-body text-lg mb-8 leading-relaxed opacity-90">
+                    Cartografías Digitales e Informes territoriales en Arica. Entrega en 48hrs a 72hrs.
+                </p>
+<a class="inline-flex items-center gap-3 px-6 py-4 bg-primary rounded-xl text-on-primary font-headline font-bold shadow-2xl active:scale-95 transition-transform" href="https://wa.me/#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    Solicitar cotización por WSP
+                </a>
+</div>
+</section>
+<!-- Services Section: Bento Grid Inspired -->
+<section class="px-6 py-16 bg-surface-container-low">
+<div class="mb-10">
+<span class="font-label text-xs tracking-widest text-secondary font-bold uppercase">Servicios</span>
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mt-2">Soluciones Territoriales</h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-primary">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-2">Cartografías Prediales</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Límites exactos, determinación de uso de suelo y ubicación geográfica certificada.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-secondary">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/10 flex items-center justify-center mb-4 text-secondary">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-2">Análisis NDVI</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Estudio del estado del terreno y índices de productividad mediante sensores remotos.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-tertiary">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/10 flex items-center justify-center mb-4 text-tertiary">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-2">Mapas de Riesgo</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Planes de evacuación detallados y delimitación de zonas críticas ante desastres naturales.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-primary">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-2">Informes Territoriales</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Documentación técnica especializada para toma de decisiones en proyectos de inversión.</p>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="px-6 py-16 flex flex-col gap-8">
+<div class="relative w-full aspect-square rounded-full overflow-hidden border-8 border-surface-container-high shadow-xl">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a confident female geographer in her 30s, neutral background, smart business casual attire, natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsL32QXqxkrVR806sCcwLLPuluJ-TIbTVK8VnTOVZ36pdNrYM0uZ6_LeBLSPgQ3MIukzn7iZY5rh6rsudF5ai36Ffb1hFn1_50kgKu0NQ_0uQXiaf_Zcb8HUYH8x7fHISJz6qRUni8ASJLH8COzVH4oGOkRkyxa4_jnQ0LtC7dFsuC7gM7hgWem1dzYWqXkJ0av8fNuPPVJ5NCyMFcBAWHcekkL97vUEl5aUG11_7HtM5ob_Ne9F0RHHCpBwMdSTrFcVgH37xCyg"/>
+</div>
+<div class="space-y-4">
+<h2 class="font-headline text-3xl font-extrabold text-primary tracking-tighter">Sobre mí</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                    Soy geógrafa titulada en Arica, especializada en <span class="font-bold text-on-surface">cartografía, análisis territorial y gestión del riesgo</span>. 
+                </p>
+<p class="text-on-surface-variant leading-relaxed">
+                    He trabajado en proyectos reales y actualmente apoyo a clientes en Chile y el extranjero, dominando herramientas de vanguardia como <span class="text-tertiary font-semibold">QGIS y SIG</span> para resultados de alta precisión técnica.
+                </p>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-label uppercase tracking-widest text-on-surface-variant">Expertise: QGIS</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-label uppercase tracking-widest text-on-surface-variant">SIG / GIS</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-label uppercase tracking-widest text-on-surface-variant">Data Analysis</span>
+</div>
+</div>
+</section>
+<!-- Portfolio Section: Horizontal Scroll -->
+<section class="py-16 bg-white overflow-hidden">
+<div class="px-6 mb-8 flex justify-between items-end">
+<div>
+<span class="font-label text-xs tracking-widest text-secondary font-bold uppercase">Proyectos</span>
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface">Casos de Éxito</h2>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-4 px-6 no-scrollbar pb-8">
+<!-- Project 1 -->
+<div class="min-w-[280px] bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="satellite imagery showing green health distribution across an agricultural plot with NDVI heat map overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBU8Zn-wgzCCvI8ol6d9l0e-UWpn57-MFuc9CTTUOuf4gZ4T0AaTIFGBvEs3WBrW9AJZzageqVHpiCh78z1F7uohGtfOUCcjKdP_sgkpyGtwDf66IAB3EkVyaxr9i1uPlMCnWOOtYaflX4o9WtWceNCu_bswJrf-LFO6IoDNpemXH5yBqph9LP-dslmoUAznR6ENmV-XURFx6h3PK7NLpSIre8QfpnjR5Mq5IK4vQALh3_EZIHox2j1kiIrDs4SbdlRV60blnHfQ"/>
+</div>
+<div class="p-5">
+<h4 class="font-headline font-bold mb-1">Monitoreo NDVI Azapa</h4>
+<p class="text-xs text-on-surface-variant">Optimización de riego y detección de estrés hídrico en olivos.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="min-w-[280px] bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="topographic contour map of a mountainous region with precise elevation lines and technical markings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLLOAr5MwzzzXCdzjwlVLFJXgvY1vxnk581xpkPnyckAUMdjoGeCFmEltL2acsVx0KHXxPzEemQ_ayLrYs_Oy8l6rLg3ZG6mAEbBBJ4-KhLD0jQUyUUxsZAxgVDLkdEkRKBshbZS5FBFhXRW1JjzRrPnUdnDwYUj6qopk22BkOjYBwGPj8-zYfWQHsD-xjKg_UbZX7f60h1XeRIecO5fdo5AvNSGSnBssCYxygov9KO_ThcyzP563VwsU3Neec7j0FGpLlEehKCA"/>
+</div>
+<div class="p-5">
+<h4 class="font-headline font-bold mb-1">Plan de Evacuación Camarones</h4>
+<p class="text-xs text-on-surface-variant">Diseño de rutas seguras y tiempos de respuesta para comunidad rural.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="min-w-[280px] bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="professional digital blueprint overlaying an aerial photograph of rural land parcels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCZ7KKCaRnsmpeMW4yAgIk8M8rUiBerb5-Liwqg1Uok1shV4IEImKGB8yPDcQosEWz6OapdU3gbnOStdTsr-UdKRdmEPDuWJmm-1GwO8Ij3O1jTwwI2bDQ4fxZMnnDmJHqhr-jhbP5ZMYIhJPRsaXJqWPN0TsHGBIIZCmRgmD72M7GBtUbM6Q7QT0KqHAW9SRV1ry5gaosAVyRVtBPS6c3GsI5Nh7h-CVBdMQuYgmPtd4xLRkp0TWxDPRyJ74UPbzj8wZpPcBqKg"/>
+</div>
+<div class="p-5">
+<h4 class="font-headline font-bold mb-1">Cartografía Predial Lluta</h4>
+<p class="text-xs text-on-surface-variant">Delimitación de propiedad y deslindes georreferenciados.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Fiverr Section -->
+<section class="px-6 py-12">
+<div class="bg-tertiary rounded-2xl p-8 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+<h3 class="font-headline text-2xl font-bold mb-4">Encuéntrame también en Fiverr</h3>
+<p class="text-on-tertiary-container text-sm leading-relaxed mb-6">
+                    Ofrezco servicios internacionales de digitalización cartográfica y análisis de datos SIG para clientes en todo el mundo.
+                </p>
+<a class="inline-block px-6 py-3 bg-white text-tertiary font-bold rounded-lg active:scale-95 transition-transform text-sm uppercase tracking-wider" href="#">
+                    Ver perfil en Fiverr
+                </a>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-6 py-16 bg-surface-container-highest/30">
+<div class="text-center mb-10">
+<h2 class="font-headline text-3xl font-bold">Iniciemos tu proyecto</h2>
+<p class="text-on-surface-variant mt-2">Respuestas en menos de 12 horas</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="flex items-center justify-center gap-3 w-full py-4 bg-[#25D366] text-white rounded-xl font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    WhatsApp Directo
+                </a>
+<a class="flex items-center justify-center gap-3 w-full py-4 bg-primary text-on-primary rounded-xl font-bold" href="mailto:contacto@scami.cl">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    Enviar un Email
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-3xl mt-12 bg-stone-100 dark:bg-stone-900 flex flex-col items-center text-center p-12 gap-6 w-full">
+<span class="font-['Manrope'] font-bold text-green-950 dark:text-white text-lg">SCAMI Geospatial</span>
+<div class="flex gap-4">
+<a class="text-stone-500 hover:text-green-600 transition-colors font-['Inter'] text-sm" href="#">WhatsApp</a>
+<a class="text-stone-500 hover:text-green-600 transition-colors font-['Inter'] text-sm" href="#">Email</a>
+<a class="text-stone-500 hover:text-green-600 transition-colors font-['Inter'] text-sm" href="#">Instagram</a>
+</div>
+<p class="font-['Inter'] text-sm text-stone-600 dark:text-stone-400">© 2024 SCAMI Geospatial. All rights reserved.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-stone-50 dark:bg-stone-950 border-t border-stone-200/15 dark:border-stone-800/15 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center justify-center bg-green-100/50 dark:bg-green-900/30 text-green-900 dark:text-green-100 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-3 py-1 hover:bg-stone-100 dark:hover:bg-stone-800 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-3 py-1 hover:bg-stone-100 dark:hover:bg-stone-800 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-3 py-1 hover:bg-stone-100 dark:hover:bg-stone-800 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Contact</span>
+</a>
+</nav>
+<!-- Floating WhatsApp Button -->
+<a aria-label="WhatsApp" class="fixed bottom-24 right-6 z-[60] flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 active:scale-95 transition-transform duration-200 md:bottom-8" href="https://wa.me/#">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.63 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.415-8.412"></path>
+</svg>
+</a></body></html>
