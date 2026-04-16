@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const WHATSAPP_NUMBER = '56922190513';
+    const EMAIL_ADDRESS = 'scami.online@gmail.com';
+    
+    const whatsappLinks = document.querySelectorAll('[data-wa-link]');
+    const emailLinks = document.querySelectorAll('[data-email-link]');
+
+    whatsappLinks.forEach((link) => {
+        link.setAttribute('href', `https://wa.me/${WHATSAPP_NUMBER}`);
+    });
+
+    emailLinks.forEach((link) => {
+        link.setAttribute('href', `mailto:${EMAIL_ADDRESS}`);
+    });
+
     // 1. Scroll Animations Setup using IntersectionObserver
     const observerOptions = {
         root: null,
