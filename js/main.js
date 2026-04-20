@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const portfolioPrevButton = document.querySelector('.portfolio-arrow-prev');
     const portfolioNextButton = document.querySelector('.portfolio-arrow-next');
     const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
-    let portfolioScrollTicking = false;
 
     const getPortfolioStep = () => {
         if (!portfolioScroll) {
@@ -183,17 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (portfolioScroll) {
-        portfolioScroll.addEventListener('scroll', () => {
-            if (portfolioScrollTicking) {
-                return;
-            }
-
-            portfolioScrollTicking = true;
-            window.requestAnimationFrame(() => {
-                updatePortfolioArrows();
-                portfolioScrollTicking = false;
-            });
-        }, { passive: true });
+        portfolioScroll.addEventListener('scroll', updatePortfolioArrows);
     }
 
     if (desktopMediaQuery && typeof desktopMediaQuery.addEventListener === 'function') {
