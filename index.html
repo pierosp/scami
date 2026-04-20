@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCAMI</title>
+    <title>SCAMI Geospatial | Cartografia y Proyectos Territoriales en Arica</title>
     <meta name="description"
-        content="Cartografías Digitales e Informes Territoriales en Arica. Entrega en 48 a 72 horas. Soluciones geográficas y análisis territorial.">
+        content="SCAMI Geospatial ofrece cartografia digital, diagnosticos territoriales y formulacion de proyectos comunitarios en Arica. Respuesta en menos de 12 horas.">
+    <meta name="author" content="SCAMI Geospatial">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#154212">
     <link rel="canonical" href="https://scami.online/">
+    <link rel="alternate" hreflang="es-CL" href="https://scami.online/">
+    <link rel="alternate" hreflang="x-default" href="https://scami.online/">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CL">
@@ -18,20 +21,24 @@
     <meta property="og:description"
         content="Cartografías digitales e informes territoriales en Arica con entrega en 48 a 72 horas.">
     <meta property="og:url" content="https://scami.online/">
-    <meta property="og:image" content="https://scami.online/assets/portfolio_4.jpg">
+    <meta property="og:image" content="https://scami.online/assets/portfolio_4.webp">
+    <meta property="og:image:secure_url" content="https://scami.online/assets/portfolio_4.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ejemplo de cartografia digital de SCAMI Geospatial">
 
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://scami.online/">
     <meta name="twitter:title" content="SCAMI | Cartografía de Precisión">
     <meta name="twitter:description"
         content="Cartografías digitales e informes territoriales en Arica con entrega en 48 a 72 horas.">
-    <meta name="twitter:image" content="https://scami.online/assets/portfolio_4.jpg">
+    <meta name="twitter:image" content="https://scami.online/assets/portfolio_4.webp">
+    <meta name="twitter:image:alt" content="Ejemplo de cartografia digital de SCAMI Geospatial">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image"
-        href="https://lh3.googleusercontent.com/aida-public/AB6AXuBmacGD-PSZZZ4sLNA4LhucunEBW9_TJi_0Kk9gC8NvMDjtHVAndV3a1NSeaUxdWVZb_3FZxL5yUx7vn08cZXClxmG5W3zU1XIJOD0E82k5wrHo81wPv43WBJ2mS6TwXDf_C7TOIdwh3miACiGWCai_bAQ6x8MHh6bPkuESuUwMLCQK4qQq5RUa8Iu1tfGfPt4bVgyUwWNC07pElJ-cGTWygkq2Z4-t1GTm-PPhVar_lbuiAuEgPv7cksgY4X9KGD7Mh-LX2K6Iwg"
-        fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/hero.webp" fetchpriority="high">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
         rel="stylesheet">
@@ -44,18 +51,113 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "SCAMI Geospatial",
-            "url": "https://scami.online/",
-            "description": "Cartografías digitales e informes territoriales en Arica, Chile.",
-            "areaServed": "Chile",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Arica",
-                "addressCountry": "CL"
-            },
-            "sameAs": [
-                "https://es.fiverr.com/arianka_o"
+            "@graph": [
+                {
+                    "@type": "ProfessionalService",
+                    "@id": "https://scami.online/#organization",
+                    "name": "SCAMI Geospatial",
+                    "url": "https://scami.online/",
+                    "description": "Cartografias digitales, diagnosticos territoriales y formulacion de proyectos comunitarios en Arica, Chile.",
+                    "image": "https://scami.online/assets/portfolio_4.webp",
+                    "email": "mailto:scami.online@gmail.com",
+                    "telephone": "+56922190513",
+                    "priceRange": "$$",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Arica",
+                        "addressCountry": "CL"
+                    },
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Arica"
+                        },
+                        {
+                            "@type": "Country",
+                            "name": "Chile"
+                        }
+                    ],
+                    "sameAs": [
+                        "https://es.fiverr.com/arianka_o"
+                    ],
+                    "makesOffer": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Formulacion de Proyectos Concursables"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Diagnosticos Territoriales"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Gestion y Acompanamiento Administrativo"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://scami.online/#website",
+                    "url": "https://scami.online/",
+                    "name": "SCAMI Geospatial",
+                    "inLanguage": "es-CL"
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://scami.online/#webpage",
+                    "url": "https://scami.online/",
+                    "name": "SCAMI Geospatial | Cartografia y Proyectos Territoriales en Arica",
+                    "description": "SCAMI Geospatial ofrece cartografia digital, diagnosticos territoriales y formulacion de proyectos comunitarios en Arica.",
+                    "isPartOf": {
+                        "@id": "https://scami.online/#website"
+                    },
+                    "about": {
+                        "@id": "https://scami.online/#organization"
+                    },
+                    "inLanguage": "es-CL"
+                }
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Que tipo de organizaciones pueden postular con apoyo de SCAMI?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "SCAMI trabaja con juntas de vecinos, clubes de adulto mayor y otras organizaciones comunitarias que necesitan formular y presentar proyectos a fondos publicos."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "En cuanto tiempo responden una consulta?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "El tiempo de primera respuesta es menor a 12 horas por WhatsApp o correo electronico."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "SCAMI solo trabaja en Arica?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "La base de operaciones esta en Arica, pero tambien ofrece servicios remotos para otras regiones de Chile y clientes internacionales."
+                    }
+                }
             ]
         }
     </script>
@@ -74,7 +176,9 @@
             <nav class="desktop-nav" aria-label="Navegación principal">
                 <a href="#home" class="active">Inicio</a>
                 <a href="#services">Servicios</a>
+                <a href="#about">Sobre mi</a>
                 <a href="#portfolio">Portafolio</a>
+                <a href="#contact">Contacto</a>
             </nav>
 
         </div>
@@ -84,8 +188,8 @@
         <!-- Hero Section -->
         <section id="home" class="hero-section">
             <div class="hero-bg">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmacGD-PSZZZ4sLNA4LhucunEBW9_TJi_0Kk9gC8NvMDjtHVAndV3a1NSeaUxdWVZb_3FZxL5yUx7vn08cZXClxmG5W3zU1XIJOD0E82k5wrHo81wPv43WBJ2mS6TwXDf_C7TOIdwh3miACiGWCai_bAQ6x8MHh6bPkuESuUwMLCQK4qQq5RUa8Iu1tfGfPt4bVgyUwWNC07pElJ-cGTWygkq2Z4-t1GTm-PPhVar_lbuiAuEgPv7cksgY4X9KGD7Mh-LX2K6Iwg"
-                    alt="Vista aérea del Valle de Azapa" decoding="async" fetchpriority="high">
+                <img src="/assets/hero.webp"
+                    alt="Vista aerea del Valle de Azapa en Arica" width="1600" height="900" decoding="async" fetchpriority="high">
                 <div class="hero-overlay"></div>
             </div>
             <div class="container hero-content">
@@ -174,11 +278,11 @@
         </section>
 
         <!-- About Me Section -->
-        <section class="section layer-base">
+        <section id="about" class="section layer-base">
             <div class="container about-grid fade-in-scroll">
                 <div class="about-image">
-                    <img src="assets/me.png"
-                        alt="Retrato profesional de SCAMI" loading="lazy" decoding="async">
+                    <img src="/assets/me.webp"
+                        alt="Retrato profesional de SCAMI Geospatial" width="640" height="640" loading="lazy" decoding="async">
                 </div>
                 <div class="about-content">
                     <h2 class="font-headline section-title" style="color: var(--primary);">Sobre mí</h2>
@@ -218,9 +322,9 @@
                 <!-- Portfolio 1 -->
                 <div class="portfolio-card layer-section ghost-border">
                     <div class="portfolio-img">
-                        <img src="/assets/portfolio_4.jpg"
+                        <img src="/assets/portfolio_4.webp"
                             alt="Superposición Predial"
-                            data-full-src="/assets/portfolio_4.jpg"
+                            data-full-src="/assets/portfolio_4.webp"
                             data-full-alt="Superposición Predial" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
@@ -231,9 +335,9 @@
                 <!-- Portfolio 2 -->
                 <div class="portfolio-card layer-section ghost-border">
                     <div class="portfolio-img">
-                        <img src="/assets/portfolio_1.png"
+                        <img src="/assets/portfolio_1.webp"
                             alt="Proyectos Comunitarios"
-                            data-full-src="/assets/portfolio_1.png"
+                            data-full-src="/assets/portfolio_1.webp"
                             data-full-alt="Proyectos Comunitarios" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
@@ -244,9 +348,9 @@
                 <!-- Portfolio 3 -->
                 <div class="portfolio-card layer-section ghost-border">
                     <div class="portfolio-img">
-                        <img src="/assets/portfolio_2.jpeg"
+                        <img src="/assets/portfolio_2.webp"
                             alt="Proyecto Individual"
-                            data-full-src="/assets/portfolio_2.jpeg"
+                            data-full-src="/assets/portfolio_2.webp"
                             data-full-alt="Proyecto Individual" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
@@ -257,9 +361,9 @@
                 <!-- Portfolio 4 -->
                 <div class="portfolio-card layer-section ghost-border">
                     <div class="portfolio-img">
-                        <img src="/assets/portfolio_5.png"
+                        <img src="/assets/portfolio_5.webp"
                             alt="Sistema de Evacuación"
-                            data-full-src="/assets/portfolio_5.png"
+                            data-full-src="/assets/portfolio_5.webp"
                             data-full-alt="Sistema de Evacuación" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
@@ -270,9 +374,9 @@
                 <!-- Portfolio 5 -->
                 <div class="portfolio-card layer-section ghost-border">
                     <div class="portfolio-img">
-                        <img src="/assets/portfolio_3.png"
+                        <img src="/assets/portfolio_3.webp"
                             alt="Análisis NDVI"
-                            data-full-src="/assets/portfolio_3.png"
+                            data-full-src="/assets/portfolio_3.webp"
                             data-full-alt="Análisis NDVI" loading="lazy" decoding="async">
                     </div>
                     <div class="portfolio-details">
@@ -328,6 +432,37 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Section -->
+        <section class="section layer-section" aria-labelledby="faq-title">
+            <div class="container fade-in-scroll">
+                <span class="font-label section-kicker">Preguntas frecuentes</span>
+                <h2 id="faq-title" class="font-headline section-title">Respuestas Rapidas</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item ghost-border layer-component">
+                        <summary class="font-headline">Que tipo de organizaciones pueden postular con apoyo de SCAMI?</summary>
+                        <p class="font-body text-surface-variant">
+                            Trabajo con juntas de vecinos, clubes de adulto mayor y otras organizaciones comunitarias que necesitan formular y presentar proyectos a fondos publicos.
+                        </p>
+                    </details>
+
+                    <details class="faq-item ghost-border layer-component">
+                        <summary class="font-headline">En cuanto tiempo responden una consulta?</summary>
+                        <p class="font-body text-surface-variant">
+                            El tiempo de primera respuesta es menor a 12 horas por WhatsApp o correo electronico.
+                        </p>
+                    </details>
+
+                    <details class="faq-item ghost-border layer-component">
+                        <summary class="font-headline">SCAMI solo trabaja en Arica?</summary>
+                        <p class="font-body text-surface-variant">
+                            La base de operaciones esta en Arica, pero tambien ofrezco servicios remotos para otras regiones de Chile y clientes internacionales.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -348,7 +483,7 @@
     </a>
 
     <!-- JavaScript -->
-    <script src="./js/main.js?v=20260416" defer></script>
+    <script src="./js/main.js?v=20260420" defer></script>
 </body>
 
 </html>

@@ -234,6 +234,46 @@ button {
   box-shadow: 0 12px 20px rgba(21, 66, 18, 0.3);
 }
 
+/* FAQ */
+.faq-list {
+  margin-top: var(--spacing-lg);
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.faq-item {
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.faq-item[open] summary::after {
+  content: '\2013';
+}
+
+.faq-item p {
+  margin-top: var(--spacing-xs);
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -306,6 +346,7 @@ button {
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
+  align-items: stretch;
 }
 
 @media (min-width: 768px) {
@@ -314,11 +355,34 @@ button {
   }
 }
 
+@media (min-width: 1100px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .service-card {
   padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
   border-left: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+  line-height: 1.25;
+}
+
+@media (min-width: 1100px) {
+  .service-card {
+    min-height: 420px;
+  }
+
+  .service-card h3 {
+    min-height: 3.1rem;
+  }
 }
 
 .service-card.secondary {
